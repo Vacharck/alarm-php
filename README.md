@@ -1,1 +1,1 @@
-Alarm notification website with database implementation
+Alarm notification system with Database implementation and MVC usage made from scratch
