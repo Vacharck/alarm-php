@@ -11,4 +11,8 @@ class User
         "email",
         "password"
     ];
+
+    public function validate($info){
+
+    }
 }

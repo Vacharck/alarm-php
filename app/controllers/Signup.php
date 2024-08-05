@@ -1,8 +1,8 @@
 <?php
 
-class Signin{
+class Signup{
     use Controller;
     public function index(){
-        $this->view("signin");
+        $this->view("signup");
     }
 }

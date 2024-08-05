@@ -1,46 +1,57 @@
 <?php
 
-class Home extends Controller
+class Home
 {
-    public function index($a = "", $b = "", $c = ""){
+    use Controller;
+    public function index(){
 
         $user = new User;
 
-        /*
+        /*Select test
 
-        select test
         $arr['user_id'] = 1;
         $arr['name'] = "Julius";
         $result = $user->where($arr);
 
-        insert test, add php validation type and hash password to prevent sql injection
+        */
+
+        /*Insert test, add php validation type and hash password to prevent sql injection
+
         $arr['name'] = "Paco";
         $arr['email'] = "email@email.com";
         $arr['password'] = "password";
         $result = $user->insert($arr);
 
-        delete test
+        */
+
+        /*Delete test
+        
         $user->delete(value, 'column_database');
 
-        update test
+        */
+
+        /*Update test
+
         $arr['name'] = 'newName';
         $arr['password'] = 'newPassword';
         $user->update(2, $arr);
 
-        show function test
+        */
+
+        /*Show function test
+        
         $result = "template";
         show($result);
 
-        $arr['name'] = 'newName2';
-        $arr['password'] = 'newPassword2';
-        $user->update(4, $arr);
-
         */
 
-        
+        $this->view('home');
+    }
+
+    public function edit(){
 
         $this->view('home');
-
+        
     }
 }
 

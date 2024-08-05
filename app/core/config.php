@@ -18,3 +18,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost'){
     define ('ROOT', 'https://www.alarmsystem.com');
 }
 
+define("APP_NAME", "Alarm Website");
+
+//Showcase of errors for production
+define("DEBUG", false);

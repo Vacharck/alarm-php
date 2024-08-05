@@ -1,6 +1,7 @@
 <?php
 
-class Alarm extends Controller{
+class Alarm{
+    use Controller;
     public function index($a = "", $b = "", $c = ""){
         $this->view('alarm');
     }
