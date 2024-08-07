@@ -2,6 +2,7 @@
 
 Trait Model{
     use Database;
+    protected $errors = [];
     protected $limit = 10;
     protected $offset = 0;
     protected $order_type = "desc";
@@ -66,6 +67,7 @@ Trait Model{
     }
 
     public function insert($data){
+        
         //Remove unwanted data
         if(!empty($this->allowedColumns)){
             foreach ($data as $key => $value) {

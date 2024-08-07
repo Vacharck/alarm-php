@@ -7,7 +7,7 @@ class Home
 
         $user = new User;
 
-        /*Select test
+        /*Select user test
 
         $arr['user_id'] = 1;
         $arr['name'] = "Julius";
@@ -15,22 +15,23 @@ class Home
 
         */
 
-        /*Insert test, add php validation type and hash password to prevent sql injection
+        /*Insert user test, add php validation type and hash password to prevent sql injection
 
         $arr['name'] = "Paco";
         $arr['email'] = "email@email.com";
         $arr['password'] = "password";
+        $arr['password'] = encryptPassword($arr["password"])
         $result = $user->insert($arr);
 
         */
 
-        /*Delete test
+        /*Delete user test
         
         $user->delete(value, 'column_database');
 
         */
 
-        /*Update test
+        /*Update user test
 
         $arr['name'] = 'newName';
         $arr['password'] = 'newPassword';
