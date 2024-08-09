@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(34, 40, 49);
+}
+
+form{
+    background-color: rgb(49, 54, 63);
+}
+
+form label{
+    color: aliceblue;
+}
+
+form input{
+    background-color: rgb(14, 41, 84);
+    stroke: deepskyblue;
+} 

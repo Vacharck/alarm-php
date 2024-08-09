@@ -46,11 +46,13 @@ class Home
 
         */
 
+        $this->view('navbar');
         $this->view('home');
     }
 
     public function edit(){
 
+        $this->view('navbar');
         $this->view('home');
         
     }

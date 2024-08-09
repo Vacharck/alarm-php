@@ -1,4 +1,4 @@
-<h1>Alarm page</h1>
+<h1>New Alarm page</h1>
 
 <div>
     <form action="post">

@@ -1,9 +1,8 @@
 <?php
 
-class _404
-{
+class AlarmNew{
     use Controller;
     public function index(){
-        $this->view('404');
+        $this->view('alarmnew');
     }
 }

@@ -70,7 +70,7 @@ Trait Model{
         
         //Remove unwanted data
         if(!empty($this->allowedColumns)){
-            foreach ($data as $key => $value) {
+            foreach ($data as $key) {
                 if(!in_array($key, $this->allowedColumns)){
                     unset($data[$key]);
                 }

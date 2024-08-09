@@ -1,42 +1,39 @@
-<h1>Alarm System</h1>
+<!--
+    Hi!
+    The main purpose of this program is to implement a MVC structure from scratch in PHP.
+    The secondary purpose of this program is to implement E-Mail messaging & OAUTH functionality within the Alarm System.
+-->
 
-<div>
-    <form method="get">
-        <input placeholder="Search..." type="search" name="search" id="search">
-        <input type="submit" value="Search">
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm System</title>
+    <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
+</head>
+<body>
+    <main>
+            <h1>ALARMS, CLOCK, TIME, NOW!</h1>
 
-<div class="Navbar">  
-    <div>
-        <a href="<?=ROOT?>/signin">
-            Sign in
-        </a>
-        <a href="<?=ROOT?>/alarm">
-            New alarm
-        </a>
-    </div>
-</div>
+        <div>
+            <p>
+                Time is running<br/>
+                but we're faster.
+            </p>
 
-<div>
-    <p>
-        Welcome to the Alarm System! <br/>
-        The main purpose of this program is to implement a MVC structure from scratch in PHP. <br/>
-        The secondary purpose of this program is to implement E-Mail messaging & OAUTH functionality within the Alarm System.
-    </p>
-</div>
+            <p>
+                Forget about remembering your tasks<br/>
+                the TIME of the machines is now<br/>
+                and they are here to serve us...<br/>
+                to remind us...<br/>
+                so we can enjoy icecream without any worry...<br/>
+            </p>
 
-<div>
-    <h2>
-        Title
-    </h2>
-    <p>
-        Date & Time
-    </p>
-    <p>
-        Summary
-    </p>
-    <button>
-        Delete
-    </button>
-</div>
+            <a href="<?=ROOT?>/alarmlist">
+                show list
+            </a>
+        </div>
+    </main>
+</body>
+</html>
