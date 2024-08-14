@@ -46,7 +46,9 @@ class Home
 
         */
 
-        $this->view('navbar');
+        $data['username'] = empty($_SESSION['USER']) ? 'User':$_SESSION['USER']->email;
+
+        $this->view('navbar', $data);
         $this->view('home');
     }
 

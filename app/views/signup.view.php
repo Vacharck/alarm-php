@@ -2,6 +2,18 @@
 
 <div>    
     <form method="post">
+
+        <?php if(!empty($errors)):?>
+            <div>
+                <?php
+                    foreach ($errors as $error) {
+                        echo $error;
+                        echo "</br>";
+                    }
+                ?>
+            </div>
+        <?php endif;?>
+
         <label for="name">
             Name:
         </label>

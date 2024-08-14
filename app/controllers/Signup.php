@@ -3,14 +3,17 @@
 class Signup{
     use Controller;
     public function index(){
-        $user = new User;
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            $user = new User;
         
-        //Review this code for this is a signup not a signin
-        if ($user->validate($_POST)) {
-            $user->insert($_POST);
-            redirect('home');
+            if ($user->validateSignUp($_POST)) {
+                $user->insert($_POST);
+                redirect('signin');
+            }
+            
+            $data['errors'] = $user->errors;
         }
         
-        $this->view("signup");
+        $this->view("signup", $data);
     }
 }

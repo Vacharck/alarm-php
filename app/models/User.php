@@ -12,7 +12,7 @@ class User
         "password"
     ];
 
-    public function validate($data){
+    public function validateSignUp($data){
         $this->errors = [];
 
         if(empty($data['name'])){
@@ -24,6 +24,13 @@ class User
             $this->errors['email'] = "Missing email";
         }elseif (!filter_var($data["email"], FILTER_VALIDATE_EMAIL)) {
             $this->errors['email'] = "Please write email in proper format";
+        }else{   
+            $arr['email'] = $data['email'];
+            $row = $this->first($arr);
+
+            if(!empty($row)){
+                $this->errors['email'] = "The email provided is already in use";
+            }
         }
 
         if(empty($data['password']))
@@ -38,20 +45,20 @@ class User
         return false;
     }
 
-    public function validateCredentials($data){
+    public function validateSignIn($data){
         $this->errors = [];
 
-        $arrTemp = array($data["email"]);
+        $arr["email"] = $data["email"];
 
-        $result = $this->first($arrTemp);
+        $row = $this->first($arr);
 
-        if(empty($result)){
+        if(empty($row)){
             $this->errors['email'] = "Email provided hasn't been registered";
         }else{
-            $tablePass = $result["password"];
+            $rowPass = $row["password"];
             $userPass = $data["password"];
 
-            if(!password_verify($userPass, $tablePass)){
+            if(!password_verify($userPass, $rowPass)){
                 $this->errors['password'] = "Incorrect password, try it again";
             }
         }

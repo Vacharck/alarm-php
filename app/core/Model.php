@@ -2,7 +2,7 @@
 
 Trait Model{
     use Database;
-    protected $errors = [];
+    public $errors = [];
     protected $limit = 10;
     protected $offset = 0;
     protected $order_type = "desc";
