@@ -33,10 +33,14 @@ class Alarm{
             }
         }
 
-        if(empty($data["user_id"])){
+        if(empty($_SESSION['USER']->user_id)){
             $this->errors["user_id"] = "Login in order to create an alarm";
-        }elseif (!filter_var($data["user_id"], FILTER_VALIDATE_INT)) {
+        }elseif (!filter_var($_SESSION['USER']->user_id, FILTER_VALIDATE_INT)) {
             $this->errors["user_id"] = "The user id must be a number";
+        }else{
+            if($_SESSION['USER']->user_id == 0){
+                $this->errors["user_id"] = "The user id can't be 0";
+            }
         }
 
         if(empty($this->errors))

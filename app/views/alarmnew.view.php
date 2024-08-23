@@ -1,7 +1,17 @@
 <h1>New Alarm page</h1>
 
 <div>
-    <form action="post">
+    <form method="post">
+        <?php if(!empty($errors)):?>
+            <div>
+                <?php
+                    foreach ($errors as $error) {
+                        echo $error;
+                        echo "</br>";
+                    }
+                ?>
+            </div>
+        <?php endif;?>
         <label for="title">
             Title:
         </label>
@@ -10,10 +20,10 @@
             Summary:
         </label>
         <input type="text" name="summary" id="summary">
-        <label for="date">
+        <label for="end_date">
             Date:
         </label>
-        <input type="datetime" name="date" id="date">
+        <input type="datetime" name="end_date" id="end_date">
         <input type="submit" value="Create alarm">
     </form>
 </div>

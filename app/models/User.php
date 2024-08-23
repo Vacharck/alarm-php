@@ -55,7 +55,7 @@ class User
         if(empty($row)){
             $this->errors['email'] = "Email provided hasn't been registered";
         }else{
-            $rowPass = $row["password"];
+            $rowPass = $row->password;
             $userPass = $data["password"];
 
             if(!password_verify($userPass, $rowPass)){

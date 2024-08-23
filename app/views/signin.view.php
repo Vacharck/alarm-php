@@ -2,6 +2,17 @@
 
 <div>
     <form method="post">
+        <?php if(!empty($errors)):?>
+            <div>
+                <?php
+                    foreach ($errors as $error) {
+                        echo $error;
+                        echo "</br>";
+                    }
+                ?>
+            </div>
+        <?php endif;?>
+        
         <label for="email">
             Email:
         </label>
@@ -14,4 +25,5 @@
 
         <input type="submit" value="Login">
     </form>
+    <a href="<?=ROOT?>/signup">Sign up</a>
 </div>

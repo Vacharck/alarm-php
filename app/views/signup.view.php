@@ -29,13 +29,6 @@
         </label>
         <input type="password" name="password" id="password">
 
-        <div>
-            <label>
-                <input name="term" id="term" type="checkbox" value="1">
-                Accept terms
-            </label>
-        </div>
-
         <input type="submit" value="Create account">
     </form>
 </div>

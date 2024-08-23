@@ -7,7 +7,11 @@ class Signup{
             $user = new User;
         
             if ($user->validateSignUp($_POST)) {
-                $user->insert($_POST);
+                $arr = $_POST;
+
+                $arr["password"] = encryptPassword($arr["password"]);
+                $user->insert($arr);
+
                 redirect('signin');
             }
             

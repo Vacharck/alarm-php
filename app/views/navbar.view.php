@@ -10,9 +10,19 @@
 
 <div class="Navbar">  
     <div>
-        <a href="<?=ROOT?>/signin">
-            sign in
-        </a>
+        <h2>
+            Hello, <?=$username?>
+        </h2>
+        <?php if(empty($_SESSION["USER"])):?>
+            <a href="<?=ROOT?>/signin">
+                sign in
+            </a>
+        <?php else: ?>
+            <a href="<?=ROOT?>/signout">
+                sign out
+            </a>
+        <?php endif;?>
+        
         <a href="<?=ROOT?>/alarmnew">
             new alarm
         </a>

@@ -1,9 +1,3 @@
-<!--
-    Hi!
-    The main purpose of this program is to implement a MVC structure from scratch in PHP.
-    The secondary purpose of this program is to implement E-Mail messaging & OAUTH functionality within the Alarm System.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
